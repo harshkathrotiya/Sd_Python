@@ -1,3 +1,3 @@
 # Sd_Python
-#till tkinter
+# till tkinter
 for learning
