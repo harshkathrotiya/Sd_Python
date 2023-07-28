@@ -1,4 +1,4 @@
-3 hw add menu insert creage db,create table,insert data,updatedata,deletedata
+# hw add menu insert creage db,create table,insert data,updatedata,deletedata
 import tkinter as t
 from tkinter import filedialog 
 # global tr
