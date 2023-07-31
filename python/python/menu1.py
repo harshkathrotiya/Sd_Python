@@ -2,8 +2,8 @@
 import tkinter as t
 from tkinter import filedialog
 # global tr
-# import MySQLdb as db2
-import mysql.connector as db2
+import MySQLdb as db2
+# import mysql.connector as db2
 
 root = t.Tk()
 
@@ -64,7 +64,7 @@ def create_db():
   db1 = db2.connect(host="localhost", user="root", password="")
   name = input("enter name of your db :")
   cursor = db1.cursor()
-  sql = "create database if not exists {name}".format(name)
+  sql = "create database if not exists {name}".format(name=name)
   cursor.execute(sql)
   print("db created")
   cursor.close()
@@ -72,13 +72,10 @@ def create_db():
 
 
 def create_table():
-  db1 = db2.connect(host="localhost",
-                    user="root",
-                    password="",
-                    db="employeedb")
-  name = input("enter name of your table :")
+  db1 = db2.connect(host="localhost",user="root",password="",db="harsh")
+  
   cursor = db1.cursor()
-  qry = f"create table {name} (STUDENT_ID INT ,STD_NAME VARCHAR,STD_MOBILE VARCHAR(10),STD_ADDRESS VARCHAR ) "
+  qry = "CREATE TABLE customers (id INT AUTO_INCREMENT, name VARCHAR(50), address VARCHAR(70))) "
   cursor.execute(qry)
   print("table created")
   cursor.close()
